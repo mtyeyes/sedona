@@ -1,7 +1,7 @@
 # Личный проект «Седона» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Стас Коновалов](https://up.htmlacademy.ru/adaptive/15/user/502333).
-* Наставник: `Неизвестно`.
+* Наставник: [Ольга Тюлихова](https://up.htmlacademy.ru/adaptive/15/user/523263).
 
 ---
 
