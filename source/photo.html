@@ -3,35 +3,49 @@
   <head>
     <meta charset="utf-8">
     <title>Фото и видео</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <link href="css/style.css" rel="stylesheet">
   </head>
-  <body>
+  <body class="page">
 
-    <header class="page-header">
+    <header class="page__header">
       <nav class= "main-nav">
-        <button class="main-nav__menu-toggle">Меню</button>
-        <div class="main-nav__wrap">
-          <ul class="main-nav__list site-nav">
-            <li class="site-nav__item">
-              <a href="index.html">Главная</a>
-            </li>
-            <li class="site-nav__item site-nav__item--active">
-              <a>Фото и видео</a>
-            </li>
-            <li class="site-nav__item">
-              <a href="form.html">Форма отзыва</a>
-            </li>
-            <li class="site-nav__item">
-              <a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-            </li>
-          </ul>
-        </div>
+        <button class="main-nav__menu-toggle main-nav__menu-toggle--nojs">
+          <span class="visually-hidden">Меню</span>
+        </button>
+        <ul class="site-nav main-nav__list main-nav__list--nojs main-nav__list--closed">
+          <li class="site-nav__item">
+            <a href="index.html" class="site-nav__link">Главная</a>
+          </li>
+          <li class="site-nav__item site-nav__item--active">
+            <a class="site-nav__link site-nav__link--active">Фото и видео</a>
+          </li>
+          <li class="site-nav__item">
+            <a href="form.html" class="site-nav__link">Форма отзыва</a>
+          </li>
+          <li class="site-nav__item">
+            <a href="https://htmlacademy.ru/intensive/adaptive" class="site-nav__link">HTML Academy</a>
+          </li>
+        </ul>
       </nav>
       <div class="logo-wrap">
-        <a href="index.html" class="logo-wrap__heading logo-wrap__heading-link">Sedona</a>
+        <a href="index.html">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="../img/logo-sedona-desktop.svg">
+            <source media="(min-width: 768px)" srcset="../img/logo-sedona-tablet.svg">
+            <img class="logo-wrap__image" src="../img/logo-sedona-mobile.svg" width="102px" height="83px" alt="Логотип сайта">
+          </picture>
+        </a>
+        <img class="logo-wrap__text" src="../img/text-sedona.svg" width="229px" height="39px" alt="Sedona">
       </div>
     </header>
 
-    <main class="page-main">
+    <div style="display: none;">
+      <include src="build/img/sprite.svg"></include>
+    </div>
+
+    <main class="page__main">
 
       <section class="incite">
         <h1 class="incite__title">Фото и видео</h1>
@@ -88,24 +102,43 @@
 
     </main>
 
-    <footer class="page-footer">
-      <h2 class="page-footer__title">#Visitsedona</h2>
-      <ul class="page-footer__social social">
-        <li class="social__item">
-          <a href="https://vk.ru" class="social__link social__link--vk">Вконтакте</a>
+    <footer class="page__footer footer">
+      <h2 class="footer__title">#Visitsedona</h2>
+      <ul class="footer__social social">
+        <li class="social__item social__item--twitter">
+          <a href="https://twiter.com" class="social__link" aria-label="Twitter">
+            <svg class="social__logo social__logo--twitter">
+              <use xlink:href="#icon-twitter"></use>
+            </svg>
+          </a>
         </li>
-        <li class="social__item">
-          <a href="https://fb.com" class="social__link social__link--fb">Facebook</a>
+        <li class="social__item social__item--fb">
+          <a href="https://fb.com" class="social__link" aria-label="Facebook">
+            <svg class="social__logo social__logo--fb">
+              <use xlink:href="#icon-facebook"></use>
+            </svg>
+          </a>
         </li>
-        <li class="social__item">
-          <a href="https://youtube.com" class="social__link social__link--youtube">Youtube</a>
+        <li class="social__item social__item--youtube">
+          <a href="https://youtube.com" class="social__link" aria-label="Youtube">
+            <svg class="social__logo social__logo--youtube">
+              <use xlink:href="#icon-youtube"></use>
+            </svg>
+          </a>
         </li>
       </ul>
-      <div class="page-footer__copyright copyright">
-        <b class="copyright__text">Разработано:</b>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+      <div class="footer__copyright copyright">
+        <b class="copyright__text">Разработано</b>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Переход на сайт в HTML Academy">
+          <svg class="copyright__logo">
+            <use xlink:href="#htmlacademy"></use>
+          </svg>
+        </a>
       </div>
     </footer>
 
+  <script src="js/script.js" async></script>
+  <script src="js/picturefill.min.js" async></script>
+  <script src="js/svg4everybody.js" async></script>
   </body>
 </html>

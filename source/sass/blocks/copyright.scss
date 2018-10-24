@@ -1,0 +1,38 @@
+.copyright {
+  display: flex;
+  justify-content: center;
+  width: 220px;
+  margin: 0 auto;
+}
+
+.copyright__text {
+  @include font-general;
+  padding-top: 3px;
+  padding-right: 10px;
+  font-size: 14px;
+  line-height: 1.86;
+}
+
+.copyright__logo {
+  width: 27px;
+  height: 34px;
+  object-fit: cover;
+  fill: rgb(0, 0, 0);
+}
+
+.copyright__logo:hover,
+.copyright__logo:focus {
+  fill: rgb(129, 179, 210);
+}
+
+.copyright__logo:active {
+  fill: rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width: $tablet-width) {
+  .copyright {
+    width: auto;
+    margin: 0;
+    padding-top: 3px;
+  }
+}

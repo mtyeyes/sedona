@@ -1,0 +1,163 @@
+.town-advantages {
+  @include list-reset;
+  padding-top: 12px;
+  padding-bottom: 20px;
+}
+
+.town-advantages__item {
+  position: relative;
+  padding-left: 22%;
+  padding-right: 5%;
+
+  &::after {
+    position: absolute;
+    content: "";
+  }
+}
+
+.town-advantages__item--housing::after {
+  left: calc(20% - 42px);
+  top: -8%;
+  width: 37px;
+  height: 36px;
+  background: url("../img/icon-house.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.town-advantages__item--souvenirs::after {
+  left: calc(20% - 40px);
+  top: -12%;
+  width: 32px;
+  height: 38px;
+  background: url("../img/icon-gift.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.town-advantages__item--food::after {
+  left: calc(20% - 44px);
+  top: -4%;
+  width: 40px;
+  height: 35px;
+  background: url("../img/icon-burger.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.town-advantages__title {
+  font-size: 18px;
+  margin-bottom: 0;
+}
+
+.town-advantages__description {
+  padding-bottom: 4px;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.5;
+  color: $sedona-grey-font;
+}
+
+.town-advantages__transition {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .town-advantages {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding-top: 130px;
+    padding-bottom: 45px;
+  }
+
+  .town-advantages__title {
+    font-size: 21px;
+    line-height: 1.24;
+  }
+
+  .town-advantages__item {
+    padding-left: 45px;
+    padding-right: 45px;
+    text-align: center;
+    width: 165px;
+  }
+
+  .town-advantages__item--food {
+    width: 152px;
+  }
+
+  .town-advantages__item--souvenirs {
+    order: 2;
+  }
+
+  .town-advantages__description {
+    margin-top: 20px;
+  }
+
+  .town-advantages__transition {
+    display: initial;
+  }
+
+  .town-advantages__item--housing::after {
+    left: 35%;
+    top: -70px;
+    width: 75px;
+    height: 72px;
+  }
+
+  .town-advantages__item--souvenirs::after {
+    left: 37%;
+    top: -74px;
+    width: 64px;
+    height: 75px;
+  }
+
+  .town-advantages__item--food::after {
+    left: 35%;
+    top: -68px;
+    width: 76px;
+    height: 68px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .town-advantages {
+    justify-content: flex-start;
+    padding-bottom: 62px;
+  }
+
+  .town-advantages__item--housing {
+    width: 280px;
+    padding-left: 60px;
+  }
+
+  .town-advantages__item--food {
+    width: 300px;
+    padding-left: 65px;
+  }
+
+  .town-advantages__item--souvenirs {
+    width: 220px;
+    padding-left: 93px;
+  }
+
+  .town-advantages__description {
+    margin-top: 23px;
+  }
+
+  .town-advantages__item--housing::after {
+    left: 42%;
+    top: -70px;
+  }
+
+  .town-advantages__item--souvenirs::after {
+    left: 48%;
+    top: -72px;
+  }
+
+  .town-advantages__item--food::after {
+    left: 43%;
+    top: -68px;
+  }
+}

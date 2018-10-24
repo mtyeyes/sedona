@@ -1,0 +1,137 @@
+.modal-sent__closed,
+.modal-fail__closed {
+  display: none;
+}
+
+.modal-sent,
+.modal-fail {
+  @include font-general;
+}
+
+.modal-sent__heading,
+.modal-fail__heading {
+  font-size: 18px;
+  line-height: 1.44;
+}
+
+.modal-sent__text,
+.modal-fail__text {
+  font-size: 14px;
+  line-height: 1.71;
+  font-weight: normal;
+}
+
+.modal-sent__btn,
+.modal-fail__btn {
+  @include font-general;
+  display: block;
+  font-size: 18px;
+  line-height: 1.44;
+  color: $sedona-white;
+  background-color: $sedona-blue;
+  border: none;
+}
+
+.modal-sent {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 320px;
+  background-image: linear-gradient(rgb(255, 255, 255) 70%, rgb(242, 242, 242) 70%);
+  transform: translate(-50%, -50%);
+  box-shadow: 0 7px 15px 0 rgba(0, 1, 1, 0.15);
+}
+
+.modal-sent__heading {
+  padding-top: 25px;
+  text-align: center;
+}
+
+.modal-sent__text {
+  width: 70%;
+  margin: 0 auto;
+  padding-top: 10px;
+  text-align: center;
+}
+
+.modal-sent__btn {
+  width: 87%;
+  margin: 60px auto 20px;
+  padding: 16px 30px 15px;
+}
+
+.modal-fail {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 320px;
+  background-color: rgb(255, 255, 255);
+  transform: translate(-50%, -50%);
+  box-shadow: 0 7px 15px 0 rgba(0, 1, 1, 0.15);
+}
+
+.modal-fail__heading {
+  padding-top: 25px;
+  text-align: center;
+}
+
+.modal-fail__text {
+  width: 70%;
+  margin: 0 auto;
+  padding-top: 13px;
+  text-align: center;
+}
+
+.modal-fail__btn {
+  width: 55%;
+  margin: 27px auto 35px;
+  padding: 16px 30px 15px;
+}
+
+@media (min-width: $tablet-width) {
+  .modal-sent {
+    width: 640px;
+    background-image: linear-gradient(rgb(255, 255, 255) 56%, rgb(242, 242, 242) 56%);
+  }
+
+  .modal-sent__heading {
+    font-size: 30px;
+    line-height: 0.87;
+  }
+
+  .modal-sent__text {
+    width: 65%;
+    padding-top: 5px;
+  }
+
+  .modal-sent__btn {
+    width: 460px;
+    margin: 80px auto 45px;
+    padding: 16px 30px 15px;
+    font-size: 21px;
+    line-height: 1.24;
+  }
+
+  .modal-fail {
+    width: 400px;
+  }
+
+  .modal-fail__heading {
+    width: 60%;
+    margin: 0 auto;
+    padding-top: 50px;
+    font-size: 30px;
+    line-height: 1.33;
+  }
+
+  .modal-fail__text {
+    padding-top: 27px;
+  }
+
+  .modal-fail__btn {
+    width: 272px;
+    margin: 33px auto 50px;
+    font-size: 21px;
+    line-height: 1.24;
+  }
+}

@@ -1,0 +1,43 @@
+.incite {
+  @include font-general;
+  text-align: center;
+  padding-top: 25px;
+  padding-bottom: 5px;
+}
+
+.incite__title {
+  font-size: 18px;
+  line-height: 1.44;
+}
+
+.incite__description {
+  padding-top: 15px;
+  font-size: 14px;
+  line-height: 1.71;
+  font-weight: normal;
+}
+
+@media (min-width: $tablet-width) {
+  .incite__title {
+    padding-top: 30px;
+    font-size: 30px;
+    line-height: 0.87;
+  }
+
+  .incite__description {
+    width: 58%;
+    margin: 0 auto;
+    padding-top: 13px;
+    padding-bottom: 50px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .incite__title {
+    padding-top: 67px;
+  }
+
+  .incite__description {
+    width: 440px;
+  }
+}
