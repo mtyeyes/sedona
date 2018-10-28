@@ -1,0 +1,19 @@
+.map {
+  position: relative;
+}
+
+.map iframe {
+  width: 100%;
+}
+
+.map__wrap {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+
+.map__backup-img {
+  width: 100%;
+  height: auto;
+}

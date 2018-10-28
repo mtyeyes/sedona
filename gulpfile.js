@@ -14,7 +14,7 @@ var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
 var del = require("del");
 var concat = require("gulp-concat");
-var uglify = require('gulp-uglify');
+var uglify = require("gulp-uglify");
 
 gulp.task("html", function () {
   return gulp.src("source/*.html")

@@ -38,10 +38,10 @@
           <picture>
             <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
             <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
-            <img class="logo-wrap__image" src="img/logo-sedona-mobile.svg" width="102px" height="83px" alt="Логотип сайта">
+            <img class="logo-wrap__image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Логотип сайта">
           </picture>
         </a>
-        <img class="logo-wrap__text" src="img/text-sedona.svg" width="229px" height="39px" alt="Sedona">
+        <img class="logo-wrap__text" src="img/text-sedona.svg" width="229" height="39" alt="Sedona">
       </div>
     </header>
 
@@ -75,8 +75,8 @@
             <legend class="feedback__caption feedback__caption--contacts">Контактная информация:</legend>
             <ul class="feedback__list feedback__list--contacts">
               <li class="feedback__item feedback__item--contacts">
-                <label class="feedback__label feedback__label--contacts" for="field-mail"><span class="feedback__desktop-hide">Контактный </span>телефон*:</label>
-                <input class="feedback__input feedback__input--contacts feedback__input--tel js-required" type="tel" name="phone" id="field-mail" placeholder="Введите телефон:" pattern=".{10,}" required>
+                <label class="feedback__label feedback__label--contacts" for="field-phone"><span class="feedback__desktop-hide">Контактный </span>телефон*:</label>
+                <input class="feedback__input feedback__input--contacts feedback__input--tel js-required" type="tel" name="phone" id="field-phone" placeholder="Введите телефон:" pattern=".{10,}" required>
                 <div class="feedback__icon feedback__icon--tel"></div>
               </li>
               <li class="feedback__item feedback__item--contacts">
@@ -125,7 +125,7 @@
             </ul>
           </fieldset>
           <fieldset class="feedback__field feedback__field--emotions">
-            <legend class="feedback__caption feedback__caption--emotions">Опишите свои эмоции:</legend>
+            <legend class="feedback__caption feedback__caption--emotions"><label for="field-emotions">Опишите свои эмоции:</label></legend>
             <textarea class="feedback__text" name="text" id="field-emotions" placeholder="Опишите подробно все свои восторги"></textarea>
           </fieldset>
           <button class="feedback__btn btn" type="submit">Отправить отзыв</button>
