@@ -15,7 +15,7 @@
   padding-top: 20px;
   text-align: center;
   font-size: 18px;
-  line-height: 1.44;
+  line-height: 26px;
 }
 
 .feedback__list {
@@ -25,7 +25,7 @@
 
 .feedback__label {
   font-size: 14px;
-  line-height: 1.86;
+  line-height: 26px;
   color: rgb(51, 51, 51);
 }
 
@@ -34,7 +34,7 @@
   width: 100%;
   padding: 16px 20px;
   font-size: 18px;
-  line-height: 1.44;
+  line-height: 26px;
   font-weight: bold;
   color: rgb(0, 0, 0);
   outline: none;
@@ -65,7 +65,7 @@
 .feedback__item--name {
   display: flex;
   width: 100%;
-  padding-top: 21px;
+  padding-top: 20px;
   justify-content: space-evenly;
   align-items: center;
 }
@@ -84,7 +84,7 @@
 
 .feedback__label--contacts {
   width: 100%;
-  padding: 10px 0 8px 22px;
+  padding: 8px 0 8px 22px;
 }
 
 .feedback__input--contacts {
@@ -101,7 +101,7 @@
 
 .feedback__icon {
   flex-grow: 0;
-  height: 57px;
+  height: 58px;
   width: 58px;
   background-color: rgb(230, 230, 230);
 }
@@ -131,7 +131,7 @@
   width: 280px;
   margin: 0 auto;
   padding-top: 15px;
-  padding-bottom: 22px;
+  padding-bottom: 20px;
 }
 
 .feedback__radio-btn:checked,
@@ -146,7 +146,7 @@
   position: relative;
   text-indent: 79px;
   font-size: 18px;
-  line-height: 1.44;
+  line-height: 26px;
   text-transform: initial;
 }
 
@@ -160,7 +160,7 @@
   border-radius: 50%;
   background-color: rgb(242, 242, 242);
   font-weight: bold;
-  line-height: 1.44;
+  line-height: 26px;
 }
 
 .feedback__radio-btn:checked ~ .feedback__label--experience::after {
@@ -196,7 +196,7 @@
   width: 280px;
   margin: 0 auto;
   padding-top: 5px;
-  padding-bottom: 14px;
+  padding-bottom: 12px;
 }
 
 .feedback__checkbox {
@@ -250,7 +250,7 @@
   margin: 0 auto;
   padding: 15px 20px;
   font-size: 18px;
-  line-height: 1.44;
+  line-height: 26px;
   font-weight: bold;
   color: rgb(0, 0, 0);
   outline: none;
@@ -275,17 +275,18 @@
 }
 
 .feedback__btn {
-  @include btn-style;
   display: block;
   width: 100%;
   margin: 50px auto 42px;
   padding: 16px 30px 15px;
   font-size: 21px;
-  line-height: 1.24;
+  line-height: 26px;
   font-weight: bold;
   text-decoration: none;
   text-transform: uppercase;
+  text-align: center;
   color: $sedona-white;
+  background-color: $sedona-blue;
   border: none;
 }
 
@@ -305,7 +306,7 @@
 
   .feedback__caption {
     font-size: 21px;
-    line-height: 1.24;
+    line-height: 26px;
     padding-bottom: 35px;
   }
 
@@ -365,7 +366,7 @@
   }
 
   .feedback__item--name {
-    padding: 5px 0 15px;
+    padding: 4px 0 15px;
   }
 
   .feedback__item--experience {
@@ -409,7 +410,7 @@
   }
 
   .feedback__label--contacts {
-    padding-bottom: 6px;
+    padding-bottom: 8px;
   }
 
   .feedback__input--contacts {
@@ -419,7 +420,7 @@
   .feedback__field--sights {
     position: relative;
     width: 100%;
-    padding-bottom: 18px;
+    padding-bottom: 20px;
     order: 4;
   }
 
@@ -467,7 +468,7 @@
 
   .feedback__item--sights {
     width: 200px;
-    margin: 32px 0;
+    margin: 31px 0;
   }
 
   .feedback__item--sights:nth-child(4n) {
@@ -477,14 +478,14 @@
   .feedback__field--emotions {
     display: flex;
     width: 100%;
-    padding-bottom: 60px;
+    padding-bottom: 58px;
     order: 5;
   }
 
   .feedback__caption--emotions {
     position: relative;
     margin: 0 auto;
-    padding-bottom: 56px;
+    padding-bottom: 58px;
   }
 
   .feedback__caption--emotions::before,
@@ -522,13 +523,17 @@
     padding-top: 4px;
     order: 7;
     font-size: 14px;
-    line-height: 1.86;
+    line-height: 26px;
     letter-spacing: normal;
     text-align: right;
   }
 }
 
 @media (min-width: $desktop-width) {
+  .feedback {
+    background-color: $sedona-white;
+  }
+
   .feedback__form {
     width: 960px;
     margin: 0 auto;
@@ -547,13 +552,13 @@
 
   .feedback__list--experience,
   .feedback__list--name {
-    padding: 0 0 60px;
+    padding: 0 0 58px;
     margin: 0;
   }
 
   .feedback__item--name {
-    padding-left: 22px;
-    padding-top: 22px;
+    padding-left: 23px;
+    padding-top: 21px;
     padding-bottom: 0;
   }
 
@@ -612,7 +617,7 @@
 
   .feedback__list--contacts {
     flex-direction: row;
-    padding-bottom: 35px;
+    padding-bottom: 34px;
   }
 
   .feedback__icon--tel {
@@ -636,6 +641,7 @@
   .feedback__list--sights {
     justify-content: space-between;
     width: 100%;
+    padding-bottom: 14px;
   }
 
   .feedback__item--sights {

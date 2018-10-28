@@ -8,29 +8,30 @@
   @include font-general;
   margin-top: 0;
   font-size: 21px;
-  line-height: 1.24;
+  line-height: 26px;
   text-align: center;
 }
 
 .booking__description {
   @include font-general;
-  padding: 5px 20px;
+  padding: 3px 20px;
   font-size: 14px;
-  line-height: 1.71;
+  line-height: 24px;
   text-align: center;
 }
 
 .booking__btn {
-  @include btn-style;
   @include font-general;
   display: block;
   width: 59%;
   margin: 32px auto 0;
   padding: 15px 47px 15px;
   font-size: 21px;
-  line-height: 1.24;
+  line-height: 26px;
   text-decoration: none;
+  text-align: center;
   color: $sedona-white;
+  background-color: $sedona-blue;
 }
 
 .booking__transition {
@@ -52,12 +53,13 @@
   .booking__title {
     margin-bottom: 11px;
     font-size: 30px;
-    line-height: 0.87;
+    line-height: 26px;
   }
 
   .booking__description {
     width: 75%;
-    line-height: 1.71;
+    line-height: 24px;
+    padding: 5px 20px;
   }
 
   .booking__btn {
@@ -73,11 +75,11 @@
 @media (min-width: $desktop-width) {
   .booking {
     width: 100%;
-    padding-bottom: 70px;
+    padding-bottom: 68px;
   }
 
   .booking__title {
-    margin-bottom: 15px;
+    margin-bottom: 13px;
   }
 
   .booking__description {

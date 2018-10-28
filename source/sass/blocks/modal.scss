@@ -11,13 +11,13 @@
 .modal-sent__heading,
 .modal-fail__heading {
   font-size: 18px;
-  line-height: 1.44;
+  line-height: 26px;
 }
 
 .modal-sent__text,
 .modal-fail__text {
   font-size: 14px;
-  line-height: 1.71;
+  line-height: 24px;
   font-weight: normal;
 }
 
@@ -26,7 +26,7 @@
   @include font-general;
   display: block;
   font-size: 18px;
-  line-height: 1.44;
+  line-height: 26px;
   color: $sedona-white;
   background-color: $sedona-blue;
   border: none;
@@ -96,7 +96,7 @@
 
   .modal-sent__heading {
     font-size: 30px;
-    line-height: 0.87;
+    line-height: 26px;
   }
 
   .modal-sent__text {
@@ -109,7 +109,7 @@
     margin: 80px auto 45px;
     padding: 16px 30px 15px;
     font-size: 21px;
-    line-height: 1.24;
+    line-height: 26px;
   }
 
   .modal-fail {
@@ -121,7 +121,7 @@
     margin: 0 auto;
     padding-top: 50px;
     font-size: 30px;
-    line-height: 1.33;
+    line-height: 40px;
   }
 
   .modal-fail__text {
@@ -132,6 +132,6 @@
     width: 272px;
     margin: 33px auto 50px;
     font-size: 21px;
-    line-height: 1.24;
+    line-height: 26px;
   }
 }

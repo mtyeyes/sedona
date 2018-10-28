@@ -1,0 +1,13 @@
+.btn:hover,
+.btn:focus {
+  background-color: rgb(102, 158, 192);
+}
+
+.btn:active {
+  background-color: rgb(84, 150, 189);
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.btn:disabled {
+  background-color: rgb(229, 229, 229);
+}

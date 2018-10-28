@@ -1,0 +1,241 @@
+.video {
+  @include font-general;
+  padding-bottom: 42px;
+  text-align: center;
+  line-height: 0;
+}
+
+.video__caption {
+  margin: 0;
+  padding: 8px 0;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.video__text {
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 18px;
+  padding-bottom: 35px;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: normal;
+}
+
+.video__player {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.video__img {
+  height: auto;
+  width: 100%;
+}
+
+.video__controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin: 0 20px;
+  background-color: rgb(243, 243, 243);
+}
+
+.video__scale {
+  position: relative;
+  height: 45px;
+  width: 100%;
+  margin-top: -45px;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.video__scale::before {
+  position: absolute;
+  content: "";
+  top: 23px;
+  left: 8%;
+  height: 3px;
+  width: 85%;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.video__scale::after {
+  position: absolute;
+  content: "";
+  top: 20px;
+  left: 21%;
+  width: 9px;
+  height: 9px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(255, 255, 255);
+}
+
+.video__replay {
+  height: 20px;
+  width: 16px;
+  padding: 24px 25px;
+  fill: rgb(92, 104, 112);
+}
+
+.video__subtitles {
+  height: 20px;
+  width: 32px;
+  margin-left: auto;
+  padding: 24px 8px 24px 0;
+  fill: rgb(92, 104, 112);
+}
+
+.video__fullscreen {
+  height: 20px;
+  width: 20px;
+  padding: 24px 23px;
+  fill: rgb(92, 104, 112);
+}
+
+.video__replay:hover,
+.video__replay:focus,
+.video__subtitles:hover,
+.video__subtitles:focus,
+.video__fullscreen:hover,
+.video__fullscreen:focus {
+  fill: rgb(51, 51, 51);
+}
+
+.video__replay:active,
+.video__subtitles:active,
+.video__fullscreen:active {
+  fill: rgb(185, 185, 185);
+}
+
+@media (min-width: $tablet-width) {
+  .video {
+    padding: 0 60px 45px 60px;
+  }
+
+  .video__caption {
+    padding-bottom: 13px;
+    font-size: 30px;
+    line-height: 26px;
+  }
+
+  .video__text {
+    width: 65%;
+    padding-bottom: 72px;
+  }
+
+  .video__controls {
+    z-index: 3;
+    flex-wrap: nowrap;
+    margin: -93px auto 0;
+    width: 100%;
+    max-width: 800px;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  .video__scale {
+    flex-grow: 1;
+    width: 50%;
+    margin-top: 0;
+    order: 2;
+    background: none;
+  }
+
+  .video__scale::before {
+    top: 45px;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  .video__scale::after {
+    top: 42px;
+    left: 29%;
+    width: 9px;
+    height: 9px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(255, 255, 255);
+  }
+
+  .video__replay {
+    order: 1;
+    padding: 35px 42px 38px 35px;
+    fill: rgb(255, 255, 255);
+  }
+
+  .video__subtitles {
+    order: 3;
+    padding: 36px 31px 37px 42px;
+    fill: rgb(255, 255, 255);
+  }
+
+  .video__fullscreen {
+    order: 3;
+    padding: 36px 41px 37px 0;
+    fill: rgb(255, 255, 255);
+  }
+
+  .video__player {
+    display: flex;
+    height: 500px;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  .video__img {
+    z-index: -1;
+    position: absolute;
+    width: 800px;
+  }
+
+  .video__replay:hover,
+  .video__replay:focus,
+  .video__subtitles:hover,
+  .video__subtitles:focus,
+  .video__fullscreen:hover,
+  .video__fullscreen:focus {
+    fill: rgb(195, 195, 195);
+  }
+
+  .video__replay:active,
+  .video__subtitles:active,
+  .video__fullscreen:active {
+    fill: rgb(149, 149, 149);
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .video {
+    position: relative;
+    background-color: $sedona-white;
+    padding: 0 60px 90px 60px;
+  }
+
+  .video__text {
+    width: 40%;
+    padding-bottom: 72px;
+  }
+
+  .video__player {
+    width: 800px;
+    margin: 0 auto;
+  }
+
+
+  .video__img {
+    z-index: 1;
+    position: initial;
+    width: 1080px;
+  }
+
+  .video__controls {
+    position: absolute;
+    left: calc(50% - 400px);
+    width: 800px;
+  }
+}

@@ -3,16 +3,29 @@
   height: 158px;
   display: flex;
   justify-content: center;
-  background-image: url("../img/bg-intro-triangle-mobile.svg"), url("../img/bg-back-mobile@1x.jpg");
-  background-repeat: no-repeat, no-repeat;
-  background-position: center bottom, center bottom;
-  background-size: 100% auto, auto;
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 100% auto;
+}
+
+.logo-wrap::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  min-width: 320px;
+  height: 57px;
+  left: 0;
+  bottom: 0;
+  background-image: url("../img/bg-intro-triangle.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .logo-wrap--index {
   height: 389px;
   background-position: center bottom, center;
-  background-size: 100vw auto, cover;
+  background-size: cover;
 }
 
 .logo-wrap__image {
@@ -32,19 +45,19 @@
 
 @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
   .logo-wrap {
-    background-image: url("../img/bg-intro-triangle-mobile.svg"), url("../img/bg-back-mobile@2x.jpg");
+    background-image: url("../img/bg-back-mobile@2x.jpg");
   }
 }
 
 @media (min-width: $tablet-width) {
   .logo-wrap {
     height: 290px;
-    background-image: url("../img/bg-intro-triangle-tablet.svg"), url("../img/bg-back-tablet@1x.jpg");
+    background-image: url("../img/bg-back-tablet@1x.jpg");
     background-position: center bottom, center bottom;
     background-size: 100% auto, cover;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/bg-intro-triangle-tablet.svg"), url("../img/bg-back-tablet@2x.jpg");
+      background-image: url("../img/bg-back-tablet@2x.jpg");
     }
   }
 
@@ -68,10 +81,10 @@
 @media (min-width: $desktop-width) {
   .logo-wrap {
     height: 301px;
-    background-image: url("../img/bg-intro-triangle-desktop.svg"), url("../img/bg-back-desktop@1x.jpg");
+    background-image: url("../img/bg-back-desktop@1x.jpg");
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/bg-intro-triangle-desktop.svg"), url("../img/bg-back-desktop@2x.jpg");
+      background-image: url("../img/bg-back-desktop@2x.jpg");
     }
   }
 
