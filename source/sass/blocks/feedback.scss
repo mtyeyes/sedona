@@ -339,7 +339,8 @@
   }
 
   .feedback__caption--experience {
-    min-width: 273px;
+    min-width: 300px;
+    max-width: 350px;
     padding-left: 25px;
     padding-bottom: 57px;
     flex-grow: 0;
@@ -380,17 +381,21 @@
   }
 
   .feedback__caption--name {
-    padding-right: 105px;
+    padding-left: 40px;
     padding-bottom: 38px;
+    max-width: 350px;
+    text-align: left;
   }
 
   .feedback__field--contacts {
     width: 100%;
     order: 3;
-    padding: 0 40px;
+    margin: 0 40px;
   }
 
   .feedback__caption--contacts {
+    width: 50%;
+    margin: 0 auto;
     padding-top: 15px;
   }
 
@@ -399,18 +404,18 @@
   .feedback__caption--contacts::after {
     position: absolute;
     content: "";
-    width: 19%;
+    width: 38%;
     height: 2px;
-    top: 27px;
+    top: 50%;
     background-image: linear-gradient(rgb(224, 224, 224) 50%, rgb(243, 243, 243) 50%);
   }
 
   .feedback__caption--contacts::before {
-    left: 0;
+    left: -163px;
   }
 
   .feedback__caption--contacts::after {
-    right: 0;
+    right: -163px;
   }
 
   .feedback__label--contacts {
@@ -424,25 +429,31 @@
   .feedback__field--sights {
     width: 100%;
     order: 4;
-    padding: 0 40px 42px;
+    padding: 0 0 42px;
+    margin: 0 40px;
   }
 
   .feedback__caption--sights::before,
   .feedback__caption--sights::after {
     position: absolute;
     content: "";
-    width: 19%;
+    width: 38%;
     height: 2px;
-    top: 44px;
+    top: 60%;
     background-image: linear-gradient(rgb(224, 224, 224) 50%, rgb(243, 243, 243) 50%);
   }
 
   .feedback__caption--sights::before {
-    left: 0;
+    left: -160px;
   }
 
   .feedback__caption--sights::after {
-    right: 0;
+    right: -160px;
+  }
+
+  .feedback__caption--sights {
+    width: 50%;
+    margin: 0 auto;
   }
 
   .feedback__list--sights {
@@ -473,21 +484,23 @@
   .feedback__caption--emotions::after {
     position: absolute;
     content: "";
-    width: 17%;
+    width: 34%;
     height: 2px;
-    top: 32px;
+    top: 31%;
     background-image: linear-gradient(rgb(224, 224, 224) 50%, rgb(243, 243, 243) 50%);
   }
 
   .feedback__caption--emotions::before {
-    left: 40px;
+    left: -140px;
   }
 
   .feedback__caption--emotions::after {
-    right: 40px;
+    right: -140px;
   }
 
   .feedback__caption--emotions {
+    width: 50%;
+    margin: 0 auto;
     padding-bottom: 58px;
   }
 
@@ -541,6 +554,8 @@
   .feedback__caption--experience {
     padding-left: 77px;
     padding-bottom: 57px;
+    min-width: 355px;
+    max-width: 470px;
   }
 
   .feedback__field--name {
@@ -556,8 +571,8 @@
   }
 
   .feedback__caption--name {
-    padding-right: 205px;
     padding-bottom: 38px;
+    max-width: 430px;
   }
 
   .feedback__caption--contacts {
@@ -572,20 +587,21 @@
   .feedback__field--contacts {
     width: 100%;
     padding: 0;
+    margin: 0;
   }
 
   .feedback__caption--contacts::before,
   .feedback__caption--contacts::after {
-    width: 29%;
-    top: 25px;
+    width: 280px;
+    top: 22%;
   }
 
   .feedback__caption--contacts::before {
-    left: 0;
+    left: -240px;
   }
 
   .feedback__caption--contacts::after {
-    right: 0;
+    right: -240px;
   }
 
   .feedback__item--contacts {
@@ -619,19 +635,20 @@
   .feedback__caption--sights::before,
   .feedback__caption--sights::after {
     width: 280px;
-    top: 33px;
+    top: 40%;
   }
 
   .feedback__caption--sights::before {
-    left: 0;
+    left: -240px;
   }
 
   .feedback__caption--sights::after {
-    right: 0;
+    right: -240px;
   }
 
   .feedback__field--sights {
     padding: 0 0 33px 0;
+    margin: 0;
   }
 
   .feedback__list--sights {
@@ -655,15 +672,15 @@
   .feedback__caption--emotions::before,
   .feedback__caption--emotions::after {
     width: 280px;
-    top: 30px;
+    top: 30%;
   }
 
   .feedback__caption--emotions::before {
-    left: 0;
+    left: -240px;
   }
 
   .feedback__caption--emotions::after {
-    right: 0;
+    right: -240px;
   }
 
   .feedback__caption--emotions {
