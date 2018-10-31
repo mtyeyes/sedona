@@ -2,12 +2,14 @@
   font-weight: normal;
   font-family: "PT Sans";
   font-style: normal;
+  font-display: swap;
   src: url("../fonts/PTSans.woff2") format("woff2"), url("../fonts/PTSans.woff") format("woff");
 }
 
 @font-face {
   font-weight: bold;
-  font-family: "PT Sans Narrow";
+  font-family: "PT Sans Bold";
   font-style: normal;
+  font-display: swap;
   src: url("../fonts/PTSansBold.woff2") format("woff2"), url("../fonts/PTSansBold.woff") format("woff");
 }

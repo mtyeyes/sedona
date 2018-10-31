@@ -1,5 +1,5 @@
-.modal-sent__closed,
-.modal-fail__closed {
+.modal-sent--closed,
+.modal-fail--closed {
   display: none;
 }
 
@@ -19,6 +19,7 @@
   font-size: 14px;
   line-height: 24px;
   font-weight: normal;
+  color: $sedona-grey-font;
 }
 
 .modal-sent__btn,

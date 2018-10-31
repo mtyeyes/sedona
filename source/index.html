@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="format-detection" content="telephone=no">
     <link href="css/style.css" rel="stylesheet">
+    <link rel="preload" href="fonts/PTSans.woff2" as="font" type="font/woff2">
+    <link rel="preload" href="fonts/PTSansBold.woff2" as="font" type="font/woff2">
   </head>
   <body class="page">
 
@@ -65,7 +67,7 @@
 
                 <source media="(min-width: 1200px)" srcset="img/main-city-desktop@1x.jpg 1x, img/main-city-desktop@2x.jpg 2x">
                 <source media="(min-width: 768px)" srcset="img/main-city-tablet@1x.jpg 1x, img/main-city-tablet@2x.jpg 2x">
-                <img class="advantages__img" src="img/main-city-mobile@1x.jpg" srcset="img/main-city-mobile@2x.jpg 2x" alt="Фотография городка">
+                <img class="advantages__img" src="img/main-city-mobile@1x.jpg" srcset="img/main-city-mobile@2x.jpg 2x" width="320" height="260" alt="Фотография городка">
               </picture>
             </div>
             <ul class="town-advantages">
@@ -97,7 +99,7 @@
 
                 <source media="(min-width: 1200px)" srcset="/img/main-bridge-desktop@1x.jpg 1x, /img/main-bridge-desktop@2x.jpg 2x">
                 <source media="(min-width: 768px)" srcset="img/main-bridge-tablet@1x.jpg 1x, img/main-bridge-tablet@2x.jpg 2x">
-                <img class="advantages__img" src="img/main-bridge-mobile@1x.jpg" srcset="img/main-bridge-mobile@2x.jpg 2x" alt="Фотография моста дьявола">
+                <img class="advantages__img" src="img/main-bridge-mobile@1x.jpg" srcset="img/main-bridge-mobile@2x.jpg 2x" width="320" height="260" alt="Фотография моста дьявола">
               </picture>
             </div>
           </li>
@@ -127,17 +129,10 @@
 
       <section class="map">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d710522.1868062365!2d-112.27041044098621!3d34.16723865458142!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2sSedona%2C+AZ+86336%2C+USA!5e0!3m2!1sen!2sru!4v1538399615431" width="320" height="350" style="border:0;" allowfullscreen></iframe>
-        <div class="map__wrap">
-          <picture>
-            <source type="image/webp" media="(min-width: 1200px)" srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.webp 1x, img/bg-map-tablet@2x.webp 2x">
-            <source type="image/webp" srcset="img/bg-map-mobile@1x.webp 1x, img/bg-map-mobile@2x.webp 2x">
-
-            <source media="(min-width: 1200px)" srcset="img/bg-map-desktop@1x.jpg 1x, img/bg-map-desktop@2x.jpg 2x">
-            <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.jpg 1x, img/bg-map-tablet@2x.jpg 2x">
-            <img class="map__backup-img" src="img/bg-map-mobile@1x.jpg" srcset="img/bg-map-mobile@2x.jpg 2x" width="320" height="350" alt="Карта">
-          </picture>
-        </div>
+        <div class="map__img-nojs"></div>
+        <svg class="map__marker-nojs" aria-label="Седона находится в Аризоне, севернее Финикса">
+          <use xlink:href="#icon-map-marker"></use>
+        </svg>
       </section>
 
     </main>
@@ -169,7 +164,7 @@
       </ul>
       <div class="footer__copyright copyright">
         <b class="copyright__text">Разработано</b>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Переход на сайт в HTML Academy">
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Переход на сайт HTML Academy">
           <svg class="copyright__logo">
             <use xlink:href="#logo-htmlacademy"></use>
           </svg>
@@ -177,6 +172,6 @@
       </div>
     </footer>
 
-  <script src="js/script.js" async></script>
+  <script src="js/index.js" async></script>
   </body>
 </html>

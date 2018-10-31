@@ -16,8 +16,10 @@
   @include font-general;
   padding: 3px 20px;
   font-size: 14px;
+  font-weight: normal;
   line-height: 24px;
   text-align: center;
+  color: $sedona-grey-font;
 }
 
 .booking__btn {
@@ -30,6 +32,7 @@
   line-height: 26px;
   text-decoration: none;
   text-align: center;
+  font-weight: bold;
   color: $sedona-white;
   background-color: $sedona-blue;
 }

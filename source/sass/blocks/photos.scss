@@ -42,6 +42,7 @@
   text-align: left;
   text-transform: initial;
   font-weight: normal;
+  color: $sedona-grey-font;
 }
 
 .photos__social-wrap {
@@ -129,6 +130,10 @@
     margin: 0;
     padding-bottom: 62px;
     background-color: $sedona-white;
+    color: $sedona-white;
+  }
+
+  .photos__author {
     color: $sedona-white;
   }
 

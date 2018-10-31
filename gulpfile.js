@@ -11,6 +11,7 @@ var csso = require("gulp-csso");
 var imagemin = require("gulp-imagemin");
 var svgstore = require("gulp-svgstore");
 var posthtml = require("gulp-posthtml");
+var htmlmin = require("gulp-htmlmin");
 var include = require("posthtml-include");
 var del = require("del");
 var concat = require("gulp-concat");
@@ -21,6 +22,7 @@ gulp.task("html", function () {
   .pipe(posthtml([
     include()
   ]))
+  .pipe(htmlmin({ collapseWhitespace: true }))
   .pipe(gulp.dest("build"));
 });
 
@@ -77,15 +79,22 @@ gulp.task("clean", function (){
 });
 
 gulp.task("jsIndex", function() {
-  return gulp.src(["source/js/menu.js", "source/js/picturefill.min.js", "source/js/svg4everybody.js"])
-    .pipe(concat("script.js"))
+  return gulp.src(["source/js/menu.js", "source/js/map.js", "source/js/picturefill.min.js", "source/js/svg4everybody.js"])
+    .pipe(concat("index.js"))
     .pipe(uglify())
     .pipe(gulp.dest("build/js/"));
 });
 
-gulp.task("jsFeedback", function() {
+gulp.task("jsForm", function() {
   return gulp.src(["source/js/menu.js", "source/js/feedback.js", "source/js/picturefill.min.js", "source/js/svg4everybody.js"])
-    .pipe(concat("feedback.js"))
+    .pipe(concat("form.js"))
+    .pipe(uglify())
+    .pipe(gulp.dest("build/js/"));
+});
+
+gulp.task("jsPhoto", function() {
+  return gulp.src(["source/js/menu.js", "source/js/picturefill.min.js", "source/js/svg4everybody.js"])
+    .pipe(concat("photo.js"))
     .pipe(uglify())
     .pipe(gulp.dest("build/js/"));
 });
@@ -100,7 +109,7 @@ gulp.task("copy", function (){
   .pipe(gulp.dest("build"));
 });
 
-gulp.task("scripts", gulp.series("jsIndex", "jsFeedback"));
+gulp.task("scripts", gulp.series("jsIndex", "jsForm", "jsPhoto"));
 
 gulp.task("build", gulp.series("clean", "copy", "css", "sprite", "scripts", "html"));
 

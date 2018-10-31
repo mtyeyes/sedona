@@ -20,6 +20,7 @@
   font-size: 14px;
   line-height: 24px;
   font-weight: normal;
+  color: $sedona-grey-font;
 }
 
 .video__player {
@@ -56,56 +57,91 @@
   top: 23px;
   left: 8%;
   height: 3px;
-  width: 85%;
+  width: 84%;
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-.video__scale::after {
+.video__time-set-btn {
   position: absolute;
-  content: "";
   top: 20px;
   left: 21%;
-  width: 9px;
   height: 9px;
-  border-radius: 5px;
+  width: 9px;
+  padding: 0;
+  border-radius: 50%;
   border: none;
   background-color: rgb(255, 255, 255);
 }
 
-.video__replay {
+.video__replay-btn {
+  height: 66px;
+  padding: 0;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.video__replay-icon {
   height: 20px;
   width: 16px;
   padding: 24px 25px;
   fill: rgb(92, 104, 112);
 }
 
-.video__subtitles {
+.video__subtitles-btn {
+  height: 66px;
+  padding: 0;
+  margin-left: auto;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.video__subtitles-icon {
   height: 20px;
   width: 32px;
-  margin-left: auto;
   padding: 24px 8px 24px 0;
   fill: rgb(92, 104, 112);
 }
 
-.video__fullscreen {
+.video__fullscreen-btn {
+  height: 66px;
+  padding: 0;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.video__fullscreen-icon {
   height: 20px;
   width: 20px;
   padding: 24px 23px;
   fill: rgb(92, 104, 112);
 }
 
-.video__replay:hover,
-.video__replay:focus,
-.video__subtitles:hover,
-.video__subtitles:focus,
-.video__fullscreen:hover,
-.video__fullscreen:focus {
+
+.video__time-set-btn:hover,
+.video__time-set-btn:focus {
+  background-color: rgb(195, 195, 195);
+}
+
+.video__replay-btn:hover .video__replay-icon,
+.video__replay-btn:focus .video__replay-icon,
+.video__subtitles-btn:hover .video__subtitles-icon,
+.video__subtitles-btn:focus .video__subtitles-icon,
+.video__fullscreen-btn:hover .video__fullscreen-icon,
+.video__fullscreen-btn:focus .video__fullscreen-icon {
   fill: rgb(51, 51, 51);
 }
 
-.video__replay:active,
-.video__subtitles:active,
-.video__fullscreen:active {
+
+.video__time-set-btn:active {
+  background-color: rgb(149, 149, 149);
+}
+
+.video__replay-btn:active .video__replay-icon,
+.video__subtitles-btn:active .video__subtitles-icon,
+.video__fullscreen-btn:active .video__fullscreen-icon {
   fill: rgb(185, 185, 185);
 }
 
@@ -150,30 +186,37 @@
     background-color: rgba(255, 255, 255, 0.2);
   }
 
-  .video__scale::after {
+  .video__time-set-btn {
     top: 42px;
     left: 29%;
-    width: 9px;
-    height: 9px;
-    border-radius: 5px;
-    border: none;
-    background-color: rgb(255, 255, 255);
   }
 
-  .video__replay {
+  .video__replay-btn {
     order: 1;
+    height: 93px;
+  }
+
+  .video__replay-icon {
     padding: 35px 42px 38px 35px;
     fill: rgb(255, 255, 255);
   }
 
-  .video__subtitles {
+  .video__subtitles-btn {
     order: 3;
+    height: 93px;
+  }
+
+  .video__subtitles-icon {
     padding: 36px 31px 37px 42px;
     fill: rgb(255, 255, 255);
   }
 
-  .video__fullscreen {
+  .video__fullscreen-btn {
     order: 3;
+    height: 93px;
+  }
+
+  .video__fullscreen-icon {
     padding: 36px 41px 37px 0;
     fill: rgb(255, 255, 255);
   }
@@ -193,18 +236,18 @@
     width: 800px;
   }
 
-  .video__replay:hover,
-  .video__replay:focus,
-  .video__subtitles:hover,
-  .video__subtitles:focus,
-  .video__fullscreen:hover,
-  .video__fullscreen:focus {
+  .video__replay-btn:hover .video__replay-icon,
+  .video__replay-btn:focus .video__replay-icon,
+  .video__subtitles-btn:hover .video__subtitles-icon,
+  .video__subtitles-btn:focus .video__subtitles-icon,
+  .video__fullscreen-btn:hover .video__fullscreen-icon,
+  .video__fullscreen-btn:focus .video__fullscreen-icon {
     fill: rgb(195, 195, 195);
   }
 
-  .video__replay:active,
-  .video__subtitles:active,
-  .video__fullscreen:active {
+  .video__replay-btn:active .video__replay-icon,
+  .video__subtitles-btn:active .video__subtitles-icon,
+  .video__fullscreen-btn:active .video__fullscreen-icon {
     fill: rgb(149, 149, 149);
   }
 }
@@ -231,6 +274,23 @@
     z-index: 1;
     position: initial;
     width: 1080px;
+  }
+
+  .video__time-set-btn {
+    top: 42px;
+    left: 21%;
+  }
+
+  .video__replay-icon {
+    padding: 35px 42px 38px 34px;
+  }
+
+  .video__subtitles-icon {
+    padding: 36px 31px 37px 42px;
+  }
+
+  .video__fullscreen-icon {
+    padding: 36px 43px 37px 0;
   }
 
   .video__controls {

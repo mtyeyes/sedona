@@ -11,22 +11,22 @@ sentBtn.addEventListener("click", function( event ) {
       if (i == requiredInputs.length - 1) {
         event.preventDefault();
         sentBtn.disabled = true;
-        sentAlert.classList.remove("modal-sent__closed");
+        sentAlert.classList.remove("modal-sent--closed");
       }
     } else {
       sentBtn.disabled = true;
-      failAlert.classList.remove("modal-fail__closed");
+      failAlert.classList.remove("modal-fail--closed");
       break;
     }
   }
 });
 
 failClose.addEventListener("click", function() {
-  failAlert.classList.add("modal-fail__closed");
+  failAlert.classList.add("modal-fail--closed");
   sentBtn.disabled = false;
 });
 
 sentClose.addEventListener("click", function() {
-  sentAlert.classList.add("modal-sent__closed");
+  sentAlert.classList.add("modal-sent--closed");
   sentBtn.disabled = false;
 });

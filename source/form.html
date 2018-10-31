@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="format-detection" content="telephone=no">
     <link href="css/style.css" rel="stylesheet">
+    <link rel="preload" href="fonts/PTSans.woff2" as="font" type="font/woff2">
+    <link rel="preload" href="fonts/PTSansBold.woff2" as="font" type="font/woff2">
   </head>
   <body class="page">
 
@@ -162,7 +164,7 @@
       </ul>
       <div class="footer__copyright copyright">
         <b class="copyright__text">Разработано</b>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Переход на сайт в HTML Academy">
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Переход на сайт HTML Academy">
           <svg class="copyright__logo">
             <use xlink:href="#logo-htmlacademy"></use>
           </svg>
@@ -170,18 +172,18 @@
       </div>
     </footer>
 
-    <section class="modal-sent modal-sent__closed">
+    <section class="modal-sent modal-sent--closed">
       <h2 class="modal-sent__heading">Ваш отзыв отправлен!</h2>
       <p class="modal-sent__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
       <button class="modal-sent__btn btn">Закрыть окно</button>
     </section>
 
-    <section class="modal-fail modal-fail__closed">
+    <section class="modal-fail modal-fail--closed">
       <h2 class="modal-fail__heading">Что-то пошло не так!</h2>
       <p class="modal-fail__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
       <button class="modal-fail__btn btn">Ok</button>
     </section>
 
-  <script src="js/feedback.js" async></script>
+  <script src="js/form.js" async></script>
   </body>
 </html>

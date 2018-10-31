@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="format-detection" content="telephone=no">
     <link href="css/style.css" rel="stylesheet">
+    <link rel="preload" href="fonts/PTSans.woff2" as="font" type="font/woff2">
+    <link rel="preload" href="fonts/PTSansBold.woff2" as="font" type="font/woff2">
   </head>
   <body class="page">
 
@@ -65,7 +67,7 @@
 
                   <source media="(min-width: 1200px)" srcset="img/photo-sunset-desktop@1x.jpg 1x, img/photo-sunset-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)" srcset="img/photo-sunset-tablet@1x.jpg 1x, img/photo-sunset-tablet@2x.jpg 2x">
-                  <img class="photos__img" src="img/photo-sunset-mobile@1x.jpg" srcset="img/photo-sunset-mobile@2x.jpg 2x" alt="Дорога в закат">
+                  <img class="photos__img" src="img/photo-sunset-mobile@1x.jpg" srcset="img/photo-sunset-mobile@2x.jpg 2x" width="280" height="280" alt="Дорога в закат">
                 </picture>
               </div>
             </a>
@@ -92,7 +94,7 @@
 
                   <source media="(min-width: 1200px)" srcset="img/photo-cactus-desktop@1x.jpg 1x, img/photo-cactus-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)" srcset="img/photo-cactus-tablet@1x.jpg 1x, img/photo-cactus-tablet@2x.jpg 2x">
-                  <img class="photos__img" src="img/photo-cactus-mobile@1x.jpg" srcset="img/photo-cactus-mobile@2x.jpg 2x" alt="Кактус на фоне гор">
+                  <img class="photos__img" src="img/photo-cactus-mobile@1x.jpg" srcset="img/photo-cactus-mobile@2x.jpg 2x" width="280" height="280" alt="Кактус на фоне гор">
                 </picture>
               </div>
             </a>
@@ -119,7 +121,7 @@
 
                   <source media="(min-width: 1200px)" srcset="img/photo-roads-desktop@1x.jpg 1x, img/photo-roads-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)" srcset="img/photo-roads-tablet@1x.jpg 1x, img/photo-roads-tablet@2x.jpg 2x">
-                  <img class="photos__img" src="img/photo-roads-mobile@1x.jpg" srcset="img/photo-roads-mobile@2x.jpg 2x" alt="Вид сверху на дорогу посреди леса">
+                  <img class="photos__img" src="img/photo-roads-mobile@1x.jpg" srcset="img/photo-roads-mobile@2x.jpg 2x" width="280" height="280" alt="Вид сверху на дорогу посреди леса">
                 </picture>
               </div>
             </a>
@@ -146,7 +148,7 @@
 
                   <source media="(min-width: 1200px)" srcset="img/photo-bridge-desktop@1x.jpg 1x, img/photo-bridge-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)" srcset="img/photo-bridge-tablet@1x.jpg 1x, img/photo-bridge-tablet@2x.jpg 2x">
-                  <img class="photos__img" src="img/photo-bridge-mobile@1x.jpg" srcset="img/photo-bridge-mobile@2x.jpg 2x" alt="Вид на Мост дьявола">
+                  <img class="photos__img" src="img/photo-bridge-mobile@1x.jpg" srcset="img/photo-bridge-mobile@2x.jpg 2x" width="280" height="280" alt="Вид на Мост дьявола">
                 </picture>
               </div>
             </a>
@@ -176,20 +178,28 @@
             <source type="image/webp" srcset="img/video-desktop@1x.webp 1x, img/video-desktop@2x.webp 2x">
             <source media="(min-width: 1200px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
             <source media="(min-width: 768px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
-            <img class="video__img" src="img/video-desktop@1x.jpg" srcset="img/video-desktop@2x.jpg 2x" alt="Видео">
+            <img class="video__img" src="img/video-desktop@1x.jpg" srcset="img/video-desktop@2x.jpg 2x" width="320" height="200" alt="Видео">
           </picture>
         </div>
         <div class="video__controls">
-          <div class="video__scale"></div>
-          <svg class="video__replay">
-            <use xlink:href="#icon-video-replay"></use>
-          </svg>
-          <svg class="video__subtitles">
-            <use xlink:href="#icon-video-subtitles"></use>
-          </svg>
-          <svg class="video__fullscreen">
-            <use xlink:href="#icon-video-fullscreen"></use>
-          </svg>
+          <div class="video__scale">
+            <button class="video__time-set-btn" aria-label="Управление временем воспроизведения видео"></button>
+          </div>
+          <button class="video__replay-btn" aria-label="Replay">
+            <svg class="video__replay-icon">
+              <use xlink:href="#icon-video-replay"></use>
+            </svg>
+          </button>
+          <button class="video__subtitles-btn" aria-label="Субтитры">
+            <svg class="video__subtitles-icon">
+              <use xlink:href="#icon-video-subtitles"></use>
+            </svg>
+          </button>
+          <button class="video__fullscreen-btn" aria-label="Полный экран">
+            <svg class="video__fullscreen-icon">
+              <use xlink:href="#icon-video-fullscreen"></use>
+            </svg>
+          </button>
         </div>
       </section>
 
@@ -222,7 +232,7 @@
       </ul>
       <div class="footer__copyright copyright">
         <b class="copyright__text">Разработано</b>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Переход на сайт в HTML Academy">
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Переход на сайт HTML Academy">
           <svg class="copyright__logo">
             <use xlink:href="#logo-htmlacademy"></use>
           </svg>
@@ -230,6 +240,6 @@
       </div>
     </footer>
 
-    <script src="js/script.js" async></script>
+    <script src="js/photo.js" async></script>
   </body>
 </html>
