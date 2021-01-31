@@ -31,6 +31,7 @@
     "test": "npm run editorconfig && npm run stylelint",
     "build": "gulp build",
     "start": "gulp start",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
   "browserslist": [
