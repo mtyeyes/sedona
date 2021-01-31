@@ -3,109 +3,243 @@
   <head>
     <meta charset="utf-8">
     <title>Фото и видео</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="preload" href="fonts/PTSans.woff2" as="font" type="font/woff2">
+    <link rel="preload" href="fonts/PTSansBold.woff2" as="font" type="font/woff2">
   </head>
-  <body>
+  <body class="page">
 
-    <header class="page-header">
+    <header class="page__header">
       <nav class= "main-nav">
-        <button class="main-nav__menu-toggle">Меню</button>
-        <div class="main-nav__wrap">
-          <ul class="main-nav__list site-nav">
-            <li class="site-nav__item">
-              <a href="index.html">Главная</a>
-            </li>
-            <li class="site-nav__item site-nav__item--active">
-              <a>Фото и видео</a>
-            </li>
-            <li class="site-nav__item">
-              <a href="form.html">Форма отзыва</a>
-            </li>
-            <li class="site-nav__item">
-              <a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-            </li>
-          </ul>
-        </div>
+        <button class="main-nav__menu-toggle main-nav__menu-toggle--nojs">
+          <span class="visually-hidden">Меню</span>
+        </button>
+        <ul class="site-nav main-nav__list main-nav__list--nojs main-nav__list--closed">
+          <li class="site-nav__item">
+            <a href="index.html" class="site-nav__link">Главная</a>
+          </li>
+          <li class="site-nav__item site-nav__item--active">
+            <a class="site-nav__link site-nav__link--active">Фото и видео</a>
+          </li>
+          <li class="site-nav__item">
+            <a href="form.html" class="site-nav__link">Форма отзыва</a>
+          </li>
+          <li class="site-nav__item">
+            <a href="https://htmlacademy.ru/intensive/adaptive" class="site-nav__link">HTML Academy</a>
+          </li>
+        </ul>
       </nav>
       <div class="logo-wrap">
-        <a href="index.html" class="logo-wrap__heading logo-wrap__heading-link">Sedona</a>
+        <a href="index.html">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+            <img class="logo-wrap__image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Логотип сайта">
+          </picture>
+        </a>
+        <img class="logo-wrap__text" src="img/text-sedona.svg" width="229" height="39" alt="Sedona">
       </div>
     </header>
 
-    <main class="page-main">
+    <div style="display: none;">
+      <include src="build/img/sprite.svg"></include>
+    </div>
+
+    <main class="page__main">
 
       <section class="incite">
         <h1 class="incite__title">Фото и видео</h1>
-        <p class="incite__description">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике</p>
+        <p class="incite__description incite__description--photos">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике</p>
       </section>
 
       <section class="gallery">
         <h2 class="visually-hidden">Фотографии</h2>
         <ul class="gallery__list photos">
           <li class="photos__item">
-            <img src=""  width="100%" height="100%">
-            <b class="photos__sign">Неродные просторы</b>
-            <p class="photos__author">Автор фото: Борис</p>
-            <div class="photos__social-wrap">
-              <button class="photos__like-btn">Like</button>
-              <p class="photos__likes">1350</p>
+            <a href="sunset-big.jpg" class="photos__link">
+              <div class="photos__container" class="photos__link">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-sunset-desktop@1x.webp 1x, img/photo-sunset-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-sunset-tablet@1x.webp 1x, img/photo-sunset-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/photo-sunset-mobile@1x.webp 1x, img/photo-sunset-mobile@2x.webp 2x">
+
+                  <source media="(min-width: 1200px)" srcset="img/photo-sunset-desktop@1x.jpg 1x, img/photo-sunset-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/photo-sunset-tablet@1x.jpg 1x, img/photo-sunset-tablet@2x.jpg 2x">
+                  <img class="photos__img" src="img/photo-sunset-mobile@1x.jpg" srcset="img/photo-sunset-mobile@2x.jpg 2x" width="280" height="280" alt="Дорога в закат">
+                </picture>
+              </div>
+            </a>
+            <div class="photos__sign-wrap">
+              <b class="photos__sign">Неродные просторы</b>
+              <p class="photos__author">Автор фото: Борис</p>
+              <div class="photos__social-wrap">
+                <button class="photos__like-btn" aria-label="Like">
+                  <svg class="photos__icon-like">
+                    <use xlink:href="#icon-like"></use>
+                  </svg>
+                </button>
+                <p class="photos__likes" aria-label="Количество лайков">1350</p>
+              </div>
             </div>
           </li>
           <li class="photos__item">
-            <img src="" width="100%" height="100%">
-            <b class="photos__sign">Местная растительность</b>
-            <p class="photos__author">Автор фото: Сергей</p>
-            <div class="photos__social-wrap">
-              <button class="photos__like-btn">Like</button>
-              <p class="photos__likes">143</p>
+            <a href="cactus-big.jpg" class="photos__link">
+              <div class="photos__container">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-cactus-desktop@1x.webp 1x, img/photo-cactus-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-cactus-tablet@1x.webp 1x, img/photo-cactus-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/photo-cactus-mobile@1x.webp 1x, img/photo-cactus-mobile@2x.webp 2x">
+
+                  <source media="(min-width: 1200px)" srcset="img/photo-cactus-desktop@1x.jpg 1x, img/photo-cactus-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/photo-cactus-tablet@1x.jpg 1x, img/photo-cactus-tablet@2x.jpg 2x">
+                  <img class="photos__img" src="img/photo-cactus-mobile@1x.jpg" srcset="img/photo-cactus-mobile@2x.jpg 2x" width="280" height="280" alt="Кактус на фоне гор">
+                </picture>
+              </div>
+            </a>
+            <div class="photos__sign-wrap">
+              <b class="photos__sign">Местная растительность</b>
+              <p class="photos__author">Автор фото: Сергей</p>
+              <div class="photos__social-wrap">
+                <button class="photos__like-btn" aria-label="Like">
+                  <svg class="photos__icon-like">
+                    <use xlink:href="#icon-like"></use>
+                  </svg>
+                </button>
+                <p class="photos__likes" aria-label="Количество лайков">143</p>
+              </div>
             </div>
           </li>
           <li class="photos__item">
-            <img src="" width="100%" height="100%">
-            <b class="photos__sign">Дорога на север</b>
-            <p class="photos__author">Автор фото: Петр</p>
-            <div class="photos__social-wrap">
-              <button class="photos__like-btn">Like</button>
-              <p class="photos__likes">96</p>
+            <a href="roads-big.jpg" class="photos__link">
+              <div class="photos__container">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-roads-desktop@1x.webp 1x, img/photo-roads-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-roads-tablet@1x.webp 1x, img/photo-roads-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/photo-roads-mobile@1x.webp 1x, img/photo-roads-mobile@2x.webp 2x">
+
+                  <source media="(min-width: 1200px)" srcset="img/photo-roads-desktop@1x.jpg 1x, img/photo-roads-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/photo-roads-tablet@1x.jpg 1x, img/photo-roads-tablet@2x.jpg 2x">
+                  <img class="photos__img" src="img/photo-roads-mobile@1x.jpg" srcset="img/photo-roads-mobile@2x.jpg 2x" width="280" height="280" alt="Вид сверху на дорогу посреди леса">
+                </picture>
+              </div>
+            </a>
+            <div class="photos__sign-wrap photos__sign-wrap--darker">
+              <b class="photos__sign">Дорога на север</b>
+              <p class="photos__author">Автор фото: Петр</p>
+              <div class="photos__social-wrap">
+                <button class="photos__like-btn" aria-label="Like">
+                  <svg class="photos__icon-like">
+                    <use xlink:href="#icon-like"></use>
+                  </svg>
+                </button>
+                <p class="photos__likes" aria-label="Количество лайков">96</p>
+              </div>
             </div>
           </li>
-          <li class="photos_item">
-            <img src="" width="100%" height="100%">
-            <b class="photos__sign">Мост дьявола</b>
-            <p class="photos__author">Автор фото: Антон</p>
-            <div class="photos__social-wrap">
-              <button class="photos__like-btn">Like</button>
-              <p class="photos__likes">254</p>
+          <li class="photos__item">
+            <a href="bridge-big.jpg" class="photos__link">
+              <div class="photos__container">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-bridge-desktop@1x.webp 1x, img/photo-bridge-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-bridge-tablet@1x.webp 1x, img/photo-bridge-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/photo-bridge-mobile@1x.webp 1x, img/photo-bridge-mobile@2x.webp 2x">
+
+                  <source media="(min-width: 1200px)" srcset="img/photo-bridge-desktop@1x.jpg 1x, img/photo-bridge-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/photo-bridge-tablet@1x.jpg 1x, img/photo-bridge-tablet@2x.jpg 2x">
+                  <img class="photos__img" src="img/photo-bridge-mobile@1x.jpg" srcset="img/photo-bridge-mobile@2x.jpg 2x" width="280" height="280" alt="Вид на Мост дьявола">
+                </picture>
+              </div>
+            </a>
+            <div class="photos__sign-wrap">
+              <b class="photos__sign">Мост дьявола</b>
+              <p class="photos__author">Автор фото: Антон</p>
+              <div class="photos__social-wrap">
+                <button class="photos__like-btn" aria-label="Like">
+                  <svg class="photos__icon-like">
+                    <use xlink:href="#icon-like"></use>
+                  </svg>
+                </button>
+                <p class="photos__likes" aria-label="Количество лайков">254</p>
+              </div>
             </div>
           </li>
         </ul>
       </section>
 
       <section class="video">
-        <h2 class="video__title">Все еще сомневаетесь?</h2>
-        <p>Смотрите видеопризентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
-        <video src="" autoplay loop  muted controls></video>
+        <h2 class="video__caption">Все еще сомневаетесь?</h2>
+        <p class="video__text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
+        <div class="video__player">
+          <picture>
+            <source type="image/webp" media="(min-width: 1200px)" srcset="img/video-desktop@1x.webp 1x, img/video-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/video-desktop@1x.webp 1x, img/video-desktop@2x.webp 2x">
+            <source type="image/webp" srcset="img/video-desktop@1x.webp 1x, img/video-desktop@2x.webp 2x">
+            <source media="(min-width: 1200px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
+            <img class="video__img" src="img/video-desktop@1x.jpg" srcset="img/video-desktop@2x.jpg 2x" width="320" height="200" alt="Видео">
+          </picture>
+        </div>
+        <div class="video__controls">
+          <div class="video__scale">
+            <button class="video__time-set-btn" aria-label="Управление временем воспроизведения видео"></button>
+          </div>
+          <button class="video__replay-btn" aria-label="Replay">
+            <svg class="video__replay-icon">
+              <use xlink:href="#icon-video-replay"></use>
+            </svg>
+          </button>
+          <button class="video__subtitles-btn" aria-label="Субтитры">
+            <svg class="video__subtitles-icon">
+              <use xlink:href="#icon-video-subtitles"></use>
+            </svg>
+          </button>
+          <button class="video__fullscreen-btn" aria-label="Полный экран">
+            <svg class="video__fullscreen-icon">
+              <use xlink:href="#icon-video-fullscreen"></use>
+            </svg>
+          </button>
+        </div>
       </section>
 
     </main>
 
-    <footer class="page-footer">
-      <h2 class="page-footer__title">#Visitsedona</h2>
-      <ul class="page-footer__social social">
-        <li class="social__item">
-          <a href="https://vk.ru" class="social__link social__link--vk">Вконтакте</a>
+    <footer class="page__footer footer">
+      <h2 class="footer__title">#Visitsedona</h2>
+      <ul class="footer__social social">
+        <li class="social__item social__item--twitter">
+          <a href="https://twiter.com" class="social__link" aria-label="Twitter">
+            <svg class="social__logo social__logo--twitter">
+              <use xlink:href="#icon-twitter"></use>
+            </svg>
+          </a>
         </li>
-        <li class="social__item">
-          <a href="https://fb.com" class="social__link social__link--fb">Facebook</a>
+        <li class="social__item social__item--fb">
+          <a href="https://fb.com" class="social__link" aria-label="Facebook">
+            <svg class="social__logo social__logo--fb">
+              <use xlink:href="#icon-facebook"></use>
+            </svg>
+          </a>
         </li>
-        <li class="social__item">
-          <a href="https://youtube.com" class="social__link social__link--youtube">Youtube</a>
+        <li class="social__item social__item--youtube">
+          <a href="https://youtube.com" class="social__link" aria-label="Youtube">
+            <svg class="social__logo social__logo--youtube">
+              <use xlink:href="#icon-youtube"></use>
+            </svg>
+          </a>
         </li>
       </ul>
-      <div class="page-footer__copyright copyright">
-        <b class="copyright__text">Разработано:</b>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+      <div class="footer__copyright copyright">
+        <b class="copyright__text">Разработано</b>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Переход на сайт HTML Academy">
+          <svg class="copyright__logo">
+            <use xlink:href="#logo-htmlacademy"></use>
+          </svg>
+        </a>
       </div>
     </footer>
 
+    <script src="js/photo.js" async></script>
   </body>
 </html>

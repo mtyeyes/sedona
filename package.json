@@ -4,13 +4,24 @@
   "private": true,
   "description": "Личный проект «Седона» от HTML Academy",
   "devDependencies": {
+    "@htmlacademy/editorconfig-cli": "1.x",
     "autoprefixer": "9.1.x",
     "browser-sync": "2.24.x",
+    "del": "^3.0.0",
+    "gh-pages": "^3.1.0",
     "gulp": "4.0.x",
+    "gulp-concat": "^2.6.1",
+    "gulp-csso": "^3.0.1",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^4.1.0",
     "gulp-plumber": "1.2.x",
     "gulp-postcss": "8.0.x",
+    "gulp-posthtml": "^3.0.4",
+    "gulp-rename": "^1.4.0",
     "gulp-sass": "4.0.x",
-    "@htmlacademy/editorconfig-cli": "1.x",
+    "gulp-svgstore": "^7.0.0",
+    "gulp-uglify": "^3.0.1",
+    "posthtml-include": "^1.2.0",
     "stylelint": "9.6.x",
     "stylelint-config-htmlacademy": "0.1.x"
   },
@@ -18,14 +29,16 @@
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
     "test": "npm run editorconfig && npm run stylelint",
-    "build": "gulp css",
-    "start": "gulp start"
+    "build": "gulp build",
+    "start": "gulp start",
+    "deploy": "gh-pages -d build"
   },
   "browserslist": [
     "last 2 versions",
     "IE 11",
     "Firefox ESR"
   ],
+  "homepage": "http://mtyeyes.github.io/sedona",
   "editorconfig-cli": [
     "*.json",
     "*.js",
@@ -36,5 +49,9 @@
   ],
   "engines": {
     "node": "8.12"
+  },
+  "dependencies": {
+    "imagemin": "^6.0.0",
+    "imagemin-webp": "^4.1.0"
   }
 }

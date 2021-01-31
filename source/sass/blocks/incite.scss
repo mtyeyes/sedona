@@ -1,0 +1,63 @@
+.incite {
+  @include font-general;
+  text-align: center;
+  padding-top: 25px;
+  padding-bottom: 2px;
+}
+
+.incite__title {
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.incite__description {
+  padding-top: 13px;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: normal;
+  color: $sedona-grey-font;
+}
+
+.incite__description--photos {
+  width: 85%;
+  margin: 0 auto;
+  padding: 14px 0 47px;
+}
+
+@media (min-width: $tablet-width) {
+  .incite__title {
+    padding-top: 30px;
+    font-size: 30px;
+  }
+
+  .incite__description {
+    width: 58%;
+    margin: 0 auto;
+    padding-top: 13px;
+    padding-bottom: 50px;
+  }
+
+  .incite__description--photos {
+    padding-bottom: 64px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .incite {
+    background-color: $sedona-white;
+  }
+
+  .incite__title {
+    padding-top: 67px;
+  }
+
+  .incite__description {
+    width: 440px;
+    padding-top: 10px;
+    padding-bottom: 38px;
+  }
+
+  .incite__description--photos {
+    padding-bottom: 70px;
+  }
+}
